@@ -1,6 +1,11 @@
 //dispatcher
 
 let nextTodoId = 0;
+
+export const TOGGLE_Navbar = text => ({
+  type: 'TOGGLE_Navbar',
+});
+
 export const addTodo = text => ({
   type: 'ADD_TODO',
   id: nextTodoId++,
