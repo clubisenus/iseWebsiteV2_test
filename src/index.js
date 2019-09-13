@@ -15,7 +15,7 @@ const store = createStore(rootReducer)
 render(
   <Provider store={store}>
     <div>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/about" component={AboutUs} />

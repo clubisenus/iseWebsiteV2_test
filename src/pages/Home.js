@@ -27,7 +27,7 @@ const Home = (props) => (
 
 			<TopBar/>
 
-								<section id="banner">
+			<section id="banner">
         <div class="content">
           <header>
             <h1>NUS Industrial & Systems Engineering Club</h1>
