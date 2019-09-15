@@ -10,8 +10,7 @@ let facebook = "https://www.facebook.com/pg/NUSISEClub/"
 let linkedin = "https://www.linkedin.com/company/14617038/"
 let email = "mailto:club.ise.nus@gmail.com"
 //internal domains
-let domain = "http://localhost:3000/"   //for development
-//let domain = "https://nusiseclub.com/"    //for deployment
+let domain = process.env.PUBLIC_URL+'/#/'
 let about = domain + "about"
 let mc18 = domain + "18mc"
 let shop = domain + "shop"

@@ -25,7 +25,6 @@ class LeftDrawer extends Component {
 		*/
 	  }
     render(){
-        console.log(pageLinks)
         return(
             
             <SwipeableDrawer

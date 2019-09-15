@@ -9,6 +9,7 @@ import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 
 import { iseclublogo } from '../resources/images';
+import pageLinks from '../resources/pageLinks';
 
 const mapStateToProps = state => {
   return {
@@ -38,7 +39,7 @@ const Home = (props) => (
             </header>
             <p>The National University of Singapore <strong>Industrial & Systems Engineering Club</strong> is a student run organisation that seeks to improve the student life and welfare of every undergraduate student in the NUS Department of Industrial Systems Engineering and Management. The club is currently managed by it's 18th Management Committee. This website is under construction; stay tuned for more!</p>
             <ul class="actions">
-              <li><a href="#" class="button big">Learn More</a></li>
+              <li><a href={pageLinks.internal.about} class="button big">Learn More</a></li>
             </ul>
           </div>
           <span class="image object">

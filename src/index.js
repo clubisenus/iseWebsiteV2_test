@@ -7,7 +7,7 @@ import rootReducer from './reducers'
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 //pages for react-router-dom
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import MC18 from './pages/MC18'
@@ -53,6 +53,7 @@ render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
         <Router basename={process.env.PUBLIC_URL}>
+          {console.log(process.env.PUBLIC_URL)}
           <Switch>
             {/*add new route when adding new pages*/}
             <Route exact path="/" component={Home} />
