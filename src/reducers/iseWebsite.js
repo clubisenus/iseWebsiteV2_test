@@ -1,7 +1,7 @@
 const initialState = {
   visibilityFilter: false,
   todos: [],
-  navBar:true,
+  navBar:false,
 }
 
 const iseWebsite = (state = initialState, action) => {

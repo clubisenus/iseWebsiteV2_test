@@ -1,4 +1,3 @@
-
 //Import Constants that don't change eg. logos 
 import iseclublogo_ from './images/iseclublogo.png'
 import iseclublogobanner_ from './images/iseclublogobanner.png'
@@ -21,6 +20,7 @@ import pic08_ from './images/pic08.jpg'
 import pic09_ from './images/pic09.jpg'
 import pic10_ from './images/pic10.jpg'
 import pic11_ from './images/pic11.jpg'
+
 //BREAK BETWEEN IMPORTS AND EXPORTS//////////////////////////////////////////////
 
 //Export Constants that don't change eg. logos 
@@ -30,7 +30,7 @@ export const iseclublogobanner = iseclublogobanner_
 export const BACC = BACC_
 export const BACCbanner = BACCbanner_
 export const CIP = CIP_
-export const ISEFOC = ISEFOC_
+export const ISEFOCpic = ISEFOC_
 export const NC = NC_
 //ExportThings that will get changed and with new names, eg NightCycling2019
 export const ISENC2019 = ISENC2019_
