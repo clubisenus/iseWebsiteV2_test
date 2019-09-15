@@ -147,7 +147,7 @@ input, select, textarea {
 
 		}
 
-	a {
+	#a {
 		-moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
@@ -2475,7 +2475,7 @@ input, select, textarea {
 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
-	button,
+	#defaultbutton,
 	.button {
 		-moz-appearance: none;
 		-webkit-appearance: none;
