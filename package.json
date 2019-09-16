@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://cookiedan42.github.io/ISE_React",
+  "homepage": "https://nusiseclub.com",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.4.1",
