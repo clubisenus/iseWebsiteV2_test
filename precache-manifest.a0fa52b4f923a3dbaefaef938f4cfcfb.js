@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "52bc5e9e1e39b28453500bd22dfe5548",
+    "revision": "ee3aad059ed267f286fe2ced27867441",
     "url": "/ISE_React/index.html"
   },
   {
-    "revision": "b3ec42856b54f91a8429",
-    "url": "/ISE_React/static/js/2.b1b57e2a.chunk.js"
+    "revision": "c21e658bd446f094ca10",
+    "url": "/ISE_React/static/js/2.c2e92160.chunk.js"
   },
   {
-    "revision": "08ebbae15d4af2b3b83e",
-    "url": "/ISE_React/static/js/main.d7cddace.chunk.js"
+    "revision": "75bf91ad386e3199adb5",
+    "url": "/ISE_React/static/js/main.c7c61c32.chunk.js"
   },
   {
     "revision": "77ae7598cd50e3d60e24",
@@ -28,12 +28,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ISE_React/static/media/CIP.f7690cd3.png"
   },
   {
+    "revision": "3974ddecaed83a99c9f6c16fa6fa7343",
+    "url": "/ISE_React/static/media/ISEDayPoster.3974ddec.jpg"
+  },
+  {
     "revision": "2cdb1dceb973ce629f3ce9d797c121a5",
     "url": "/ISE_React/static/media/ISEFOC.2cdb1dce.jpg"
   },
   {
-    "revision": "a7235239bfc46c1f2a902101a80ba398",
-    "url": "/ISE_React/static/media/ISENC2019.a7235239.png"
+    "revision": "292d668b8cd01bfb0615d8f104bd32d0",
+    "url": "/ISE_React/static/media/ISENC2019.292d668b.png"
+  },
+  {
+    "revision": "db7d5e4e9684e0788d01e979d5654690",
+    "url": "/ISE_React/static/media/ISENight.db7d5e4e.png"
   },
   {
     "revision": "92c25fbfc062aa4c4a22be23fe9da0d0",
@@ -46,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "93daf127a07ac050bb30e0f79ab1b221",
     "url": "/ISE_React/static/media/iseclublogobanner.93daf127.png"
+  },
+  {
+    "revision": "cab6c170e415d43e796032fba327e6b7",
+    "url": "/ISE_React/static/media/iseclublogobanner2.cab6c170.png"
   },
   {
     "revision": "0dd9d24e3e48478ea9b5d7dcb96bc87d",
@@ -72,8 +84,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/ISE_React/static/media/pic06.abd226de.jpg"
   },
   {
-    "revision": "4b045153c4d7cfcf40cc399fce6b0d50",
-    "url": "/ISE_React/static/media/pic07.4b045153.jpg"
+    "revision": "3974ddecaed83a99c9f6c16fa6fa7343",
+    "url": "/ISE_React/static/media/pic07.3974ddec.jpg"
   },
   {
     "revision": "02635c635420682932031c9ed091e234",
