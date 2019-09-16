@@ -39,7 +39,7 @@ class LeftDrawer extends Component {
             <SwipeableDrawer
                 open={this.props.state.navBar}
                 onClose={this.props.ToggleNavBar}
-                transitionDuration={100}
+                
                 onOpen={this.props.ToggleNavBar}
             >
                 <div id="sidebar">
