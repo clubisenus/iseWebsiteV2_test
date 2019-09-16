@@ -3,7 +3,11 @@ React-Redux for global state
 Material-UI for easy modular components 
 react-router-dom for page navigation    
 
-Run yarn start in terminal to test locally
+Git clone   
+```yarn``` in terminal to download dependencies     
+```yarn start``` to host local    
+Ideally test on a testing repo in between these two steps,maybe by pushing the code to your own github repo?      
+```yarn deploy``` to push to actual page (pls don't anyhow push without testing, it might break things)   
 
 
 Notes:  
@@ -16,5 +20,5 @@ Notes:
 1) Still a work in progress so please be nice
 
 package.json homepage field must be changed to hosting domain   
-i.e : https://xyz.github.io/repo for test   
+i.e : https://user.github.io/repo for test   
 https://nusiseclub.com for deploy
