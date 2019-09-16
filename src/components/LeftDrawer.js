@@ -2,31 +2,40 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
-import { SwipeableDrawer,Drawer } from '@material-ui/core';
+import { SwipeableDrawer, List, ListItem, Collapse, Link } from '@material-ui/core';
 import pageLinks from '../resources/pageLinks'
+import { KeyboardArrowUp, KeyboardArrowDown } from '@material-ui/icons';
+import { pic07, ISENC2019, pic09 } from '../resources/images';
 const mapStateToProps = state => {
     return {
-		state:state.iseWebsite
+        state: state.iseWebsite
     }
 }
 
-const mapDispatchToProps =dispatch=>{
-	return{
-		ToggleNavBar: () => dispatch({ type: 'TOGGLE_Navbar' }),
-	}
+const mapDispatchToProps = dispatch => {
+    return {
+        ToggleNavBar: () => dispatch({ type: 'TOGGLE_Navbar' }),
+    }
 }
 class LeftDrawer extends Component {
-	constructor(props) {
-		super(props);
-		/*
-		this.state = {
-			//navBar:true,
-		};
-		*/
-	  }
-    render(){
-        return(
-            
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            showEvents: false,
+        };
+    };
+    ToggleEvents() {
+        console.log(this.state)
+        this.setState(state => ({
+            showEvents: !state.showEvents
+        }));
+        console.log(this.state)
+    };
+    render() {
+        this.ToggleEvents = this.ToggleEvents.bind(this)
+        return (
+
             <SwipeableDrawer
                 open={this.props.state.navBar}
                 onClose={this.props.ToggleNavBar}
@@ -34,39 +43,83 @@ class LeftDrawer extends Component {
                 onOpen={this.props.ToggleNavBar}
             >
                 <div id="sidebar">
-                {/*<div>*/}
+                    {/*<div>*/}
                     <div class="inner">
+                        {/*let's not put a searchbar if we can't get it to work*/}
+                        {/*
+                        
                         <section id="search" class="alt">
                             <form method="post" action="#">
                                 <input type="text" name="query" id="query" placeholder="Search" />
                             </form>
                         </section>
-
+                        */}
                         <nav id="menu">
                             <header class="major">
                                 <h2>Menu</h2>
                             </header>
-                            <ul>
-                                <li><a href={pageLinks.internal.domain}>Home</a></li>
-                                <li><a href={pageLinks.internal.about}>About Us</a></li>
-                                <li><a href={pageLinks.internal.mc18}>18th Management Committee</a></li>
-                                <li>
-                                    <span class="opener">Events</span>
-                                    <ul>
-                                        <li><a href={pageLinks.events.foc}>ISE Freshman Orientation Camp</a></li>
-                                        <li><a href={pageLinks.events.day}>ISE Day</a></li>
-                                        <li><a href={pageLinks.events.cycling}>ISE Night Cycling</a></li>
-                                        <li><a href={pageLinks.events.welfare}>Welfare Giveaways</a></li>
-                                        <li><a href={pageLinks.events.cip}>Community Involvement Projects</a></li>
-                                        <li><a href={pageLinks.events.careertalk}>ISE Industry and Career Talk</a></li>
-                                        <li><a href={pageLinks.events.bacc}>NUS ISE Business Analytics Case Competition</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href={pageLinks.internal.shop}>Merchandise</a></li>
-                                <li><a href={pageLinks.internal.sponsors}>Sponsorship</a></li>
-                                <li><a href={pageLinks.internal.contact}>Contact Us</a></li>
 
-                            </ul>
+                            <List>
+                                <ListItem onClick={this.props.ToggleNavBar}>
+                                    <Link href={pageLinks.internal.domain}>Home</Link>
+                                </ListItem>
+                                <ListItem onClick={this.props.ToggleNavBar}>
+                                    <Link href={pageLinks.internal.about}>About Us</Link>
+                                </ListItem>
+                                <ListItem onClick={this.props.ToggleNavBar}>
+                                    <Link href={pageLinks.internal.mc18}>18th Management Committee</Link>
+                                </ListItem>
+                                <ListItem onClick={this.props.ToggleNavBar}>
+                                    <Link href={pageLinks.internal.blog}>Blog</Link>
+                                </ListItem>
+
+                                <ListItem onClick={this.ToggleEvents}>
+                                    <span >Events</span>
+                                    {
+                                        this.state.showEvents
+                                            ? <KeyboardArrowUp />
+                                            : <KeyboardArrowDown />
+                                    }
+                                </ListItem>
+                                <Collapse in={this.state.showEvents}>
+                                    <List>
+                                        <ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.internal.bio}>Upcoming Events</Link>
+                                        </ListItem>
+                                        <ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.events.foc}>ISE Freshman Orientation Camp</Link>
+                                        </ListItem>
+                                        <ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.events.day}>ISE Day</Link>
+                                        </ListItem>
+                                        <ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.events.cycling}>ISE Night Cycling</Link>
+                                        </ListItem>
+                                        <ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.events.welfare}>Welfare Giveaways</Link>
+                                        </ListItem>
+                                        <ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.events.cip}>Community Involvement Projects</Link>
+                                        </ListItem>
+                                        <ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.events.careertalk}>ISE Industry and Career Talk</Link>
+                                        </ListItem>
+                                        <ListItem onClick={this.props.ToggleNavBar}>
+                                            <Link href={pageLinks.events.bacc}>NUS ISE Business Analytics Case Competition</Link>
+                                        </ListItem>
+                                    </List>
+                                </Collapse>
+
+                                <ListItem onClick={this.props.ToggleNavBar}>
+                                    <Link href={pageLinks.internal.shop}>Merchandise</Link>
+                                </ListItem>
+                                <ListItem onClick={this.props.ToggleNavBar}>
+                                    <Link href={pageLinks.internal.sponsors}>Sponsorship</Link>
+                                </ListItem>
+                                <ListItem onClick={this.props.ToggleNavBar}>
+                                    <Link href={pageLinks.internal.contact}>Contact Us</Link>
+                                </ListItem>
+                            </List>
                         </nav>
 
                         <section>
@@ -75,20 +128,20 @@ class LeftDrawer extends Component {
                             </header>
                             <div class="mini-posts">
                                 <article>
-                                    <a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.events.day} class="image"><img src={pic07} alt="" /></a>
                                     <p>ISE Day is here soon! Click <a href={pageLinks.events.day}>here</a> to find out more.</p>
                                 </article>
                                 <article>
-                                    <a href="#" class="image"><img src="images/ISENC2019.png" alt="" /></a>
+                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.events.cycling} class="image"><img src={ISENC2019} alt="" /></a>
                                     <p>Ready for a night of fun and laughter? Learn more about Night Cycling <a href={pageLinks.events.cycling}>here</a>.</p>
                                 </article>
                                 <article>
-                                    <a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+                                    <a onClick={this.props.ToggleNavBar} href={pageLinks.internal.shop} class="image"><img src={pic09} alt="" /></a>
                                     <p>ISE Shirt Sales have started! Click <a href={pageLinks.internal.shop}>here</a> to shop now</p>
                                 </article>
                             </div>
                             <ul class="actions">
-                                <li><a href="#" class="button">More</a></li>
+                                <li><a href={pageLinks.internal.bio} class="button">More</a></li>
                             </ul>
                         </section>
 
@@ -110,15 +163,15 @@ class LeftDrawer extends Component {
 
                     </div>
                 </div>
-            </SwipeableDrawer>
+            </SwipeableDrawer >
         )
     }
 }
 
 export default withRouter(
     compose(
-      connect(
-		  mapStateToProps,
-		  mapDispatchToProps)
+        connect(
+            mapStateToProps,
+            mapDispatchToProps)
     )(LeftDrawer)
-  )
+)

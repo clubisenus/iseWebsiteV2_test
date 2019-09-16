@@ -1,19 +1,9 @@
-/*
-Leave this alone for now
-TODO{
-    black when let alone
-    red text when hover
-}
-*/
-
-
-
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 
-import { Typography, Link } from '@material-ui/core';
+import { Button } from '@material-ui/core';
 import { withTheme } from '@material-ui/styles';
 
 const mapStateToProps = state => {
@@ -24,9 +14,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
     }
-
 }
-class HoverLink extends Component {
+class DefaultButton extends Component {
     constructor(props) {
         super(props);
 		/*
@@ -36,22 +25,23 @@ class HoverLink extends Component {
 		*/
     }
     render() {
-        let { href, contents } = this.props.HoverProps
-        let style = {marginBottom: 0, marginTop: 0,...this.props.style,color:this.props.theme.palette.text.primary}
+        let { href, contents } = this.props.ButtonProps
         return (
-            <Link href={href}>
-                <Typography color='textPrimary' variant='h3' class='logo' style={style}>
-                    {contents}
-                </Typography>
-            </Link>
+            <Button variant='outlined' 
+            class="button" 
+            href={href}
+            onClick={console.log(this.props)}
+            >
+                {contents}
+              </Button>
         )
     }
-}
+};
 export default withRouter(
     withTheme(
         compose(
             connect(
                 mapStateToProps,
                 mapDispatchToProps)
-        )(HoverLink))
+        )(DefaultButton))
 )

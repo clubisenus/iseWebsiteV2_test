@@ -8,8 +8,10 @@ import { withTheme } from '@material-ui/styles';
 import TopBar from '../components/TopBar'
 import LeftDrawer from '../components/LeftDrawer'
 
-import { iseclublogo } from '../resources/images';
+import { iseclublogo, ISEFOCpic, pic02, NC, pic04, CIP, pic06, BACC } from '../resources/images';
 import pageLinks from '../resources/pageLinks';
+import { Button } from '@material-ui/core';
+import DefaultButton from '../components/DefaultButton';
 
 const mapStateToProps = state => {
   return {
@@ -89,69 +91,55 @@ const Home = (props) => (
           </header>
           <div class="posts">
             <article>
-              <a href="https://nusiseclub.com/isefoc" class="image"><img src="images/ISEFOC.jpg" alt="" /></a>
+              <a href={pageLinks.events.foc} class="image"><img src={ISEFOCpic} alt="" /></a>
               <h3>ISE Freshman Orientation Camp</h3>
               <p>Every year, we welcome new freshman into our ISE family with a bang! The 4D3N camp, held on the last week of July, serves to introduce freshman into University life, and provides them with a strong support network of seniors and peers to ease their transition into NUS.</p>
-              <ul class="actions">
-                <li><a href="https://nusiseclub.com/isefoc" class="button">More</a></li>
-              </ul>
+              <DefaultButton ButtonProps={{ href: pageLinks.events.foc, contents: "more" }}></DefaultButton>
             </article>
             <article>
-              <a href="https://nusiseclub.com/iseday" class="image"><img src="images/pic02.jpg" alt="" /></a>
+              <a href={pageLinks.events.day} class="image"><img src={pic02} alt="" /></a>
               <h3>ISE Day</h3>
               <p>This is the day we take a break from lessons and gather for an afternoon of food and chilling! ISE Day is an annual two-part event. The first part consists of informative talks regarding VIP, SEP and NOC followed by a feedback and Q&A session with professors from the ISEM department. The second part is a get together sessions with food, games, giveaways, lucky draw and even performances! </p>
-              <ul class="actions">
-                <li><a href="https://nusiseclub.com/iseday" class="button">More</a></li>
-              </ul>
+              <DefaultButton ButtonProps={{ href: pageLinks.events.day, contents: "more" }}></DefaultButton>
             </article>
             <article>
-              <a href="https://nusiseclub.com/isenightcycling" class="image"><img src="images/NC.jpg" alt="" /></a>
+              <a href={pageLinks.events.cycling} class="image"><img src={NC} alt="" /></a>
               <h3>ISE Night Cycling</h3>
               <p>The annual ISE Night Cycling event is a long time favourite of the ISE ungraduate community. It also serves as a platform for seniors to interact and welcome juniors into ISE!</p>
-              <ul class="actions">
-                <li><a href="https://nusiseclub.com/isenightcycling" class="button">More</a></li>
-              </ul>
+              <DefaultButton ButtonProps={{ href: pageLinks.events.cycling, contents: "more" }}></DefaultButton>
             </article>
             <article>
-              <a href="https://nusiseclub.com/welfare" class="image"><img src="images/pic04.jpg" alt="" /></a>
+              <a href={pageLinks.events.welfare} class="image"><img src={pic04} alt="" /></a>
               <h3>Welfare Giveaways</h3>
               <p>The ISE Welfare Pack is an initiative to show appreciation for students’ hard work and effort throughout the academic semester. It also serves to encourage and power students through for the upcoming final examinations. Stay tuned for giveaways, be it welfare pack, milk tea...!</p>
-              <ul class="actions">
-                <li><a href="https://nusiseclub.com/welfare" class="button">More</a></li>
-              </ul>
+              <DefaultButton ButtonProps={{ href: pageLinks.events.welfare, contents: "more" }}></DefaultButton>
             </article>
             <article>
-              <a href="https://nusiseclub.com/cip" class="image"><img src="images/CIP.png" alt="" /></a>
+              <a href={pageLinks.events.cip} class="image"><img src={CIP} alt="" /></a>
               <h3>Community Involvement Projects</h3>
               <p>Every year, the Club partners with external NGOs to give back to the community and make a difference. This provides our students with an opportunity to experience the joy of voluntary servitude. </p>
-              <ul class="actions">
-                <li><a href="https://nusiseclub.com/cip" class="button">More</a></li>
-              </ul>
+              <DefaultButton ButtonProps={{ href: pageLinks.events.cip, contents: "more" }}></DefaultButton>
             </article>
             <article>
-              <a href="https://nusiseclub.com/careertalk" class="image"><img src="images/pic06.jpg" alt="" /></a>
+              <a href={pageLinks.events.careertalk} class="image"><img src={pic06} alt="" /></a>
               <h3>ISE Industry and Career Talk</h3>
               <p>ISE Industry and Career Talk is an annual event held in Semester 2 where different industries are invited to share about their company. This event aims to educate ISE undergraduates on how ISE can be applied to different industries and help them understand what companies expect from graduates.</p>
-              <ul class="actions">
-                <li><a href="https://nusiseclub.com/careertalk" class="button">More</a></li>
-              </ul>
+              <DefaultButton ButtonProps={{ href: pageLinks.events.careertalk, contents: "more" }}></DefaultButton>
             </article>
             <article>
-              <a href="https://nusiseclub.com/nusisebacc" class="image"><img src="images/BACC.jpg" alt="" /></a>
+              <a href={pageLinks.events.bacc} class="image"><img src={BACC} alt="" /></a>
               <h3>Business Analytics Case Competition</h3>
               <p>NUS-ISE BACC, introduced in 2012, is an outreach effort by the NUS-ISEM department to engage the pre-university students in the growing field of business analytics and attract their interests in pursuing related fields in their higher education. Under this platform, students will be exposed to analytics and ISE concepts, and apply them in solving real-world case problem.</p>
-              <ul class="actions">
-                <li><a href="https://nusiseclub.com/nusisebacc" class="button">More</a></li>
-              </ul>
+              <DefaultButton ButtonProps={{ href: pageLinks.events.bacc, contents: "more" }}></DefaultButton>
             </article>
             <article>
-              <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+              <a href="#" class="image"><img src={pic06} alt="" /></a>
               <h3>Engagements</h3>
               <p>Be it NUS Open Day, Freshmen Welcome Tea, Engin Life Fair... catch us at a multitude of events! We work closely with Engin Club and the ISEM Dept to share with the rest of the world what ISE is about.</p>
 
             </article>
             <article>
-              <a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+              <a href="#" class="image"><img src={pic06} alt="" /></a>
               <h3>...and many more!</h3>
               <p>We are always exploring new and exciting events for the ISE community! Stay tuned for more exciting events ;)</p>
 

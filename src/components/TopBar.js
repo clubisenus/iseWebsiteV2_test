@@ -38,11 +38,10 @@ class TopBar extends Component {
 
   render() {
     this.ToggleNavBar = this.ToggleNavBar.bind(this)
-    let navMenu = { width: '55px', height: '55px' };
     let socialStyles = { marginLeft: '5px', marginRight: '5px' };
-    let ISEcolours = this.props.theme.ISEColours
     return (
-      <AppBar position='static'>
+      <div>
+      <AppBar position='fixed'>
         <Toolbar disableGutters={true}>
           <Button
             onClick={this.props.ToggleNavBar}
@@ -63,6 +62,8 @@ class TopBar extends Component {
           <HoverLink HoverProps={{ href: pageLinks.external.email, contents: <span class="icon style2 fa-envelope" style={socialStyles} /> }} />
         </Toolbar>
       </AppBar>
+      <div style={{height:"50px"}}/>
+      </div>
     )
   }
 }

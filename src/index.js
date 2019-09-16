@@ -21,6 +21,9 @@ import NUSISEBACC from './pages/NUSISEBACC'
 import Shop from './pages/Shop'
 import Sponsorship from './pages/Sponsorship'
 import Welfare from './pages/Welfare'
+import Blog from './pages/Blog'
+import Bio from './pages/Bio'
+import ISENight from './pages/ISENight'
 
 const store = createStore(rootReducer)
 
@@ -53,16 +56,18 @@ render(
   <Provider store={store}>
     <ThemeProvider theme={theme}>
         <Router basename={process.env.PUBLIC_URL}>
-          {console.log(process.env.PUBLIC_URL)}
           <Switch>
             {/*add new route when adding new pages*/}
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/18mc" component={MC18} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/bio" component={Bio} />
             <Route path="/careertalk" component={CareerTalk} />
             <Route path="/cip" component={CIP} />
             <Route path="/contact" component={Contact} />
             <Route path="/iseday" component={ISEDay} />
+            <Route path="/isenight" component={ISENight} />
             <Route path="/isefoc" component={ISEFOC} />
             <Route path="/isenightcycling" component={NightCycling} />
             <Route path="/nusisebacc" component={NUSISEBACC} />
