@@ -1,7 +1,7 @@
 const initialState = {
   visibilityFilter: false,
   todos: [],
-  navBar:false,
+  navBar: false,
 }
 
 const iseWebsite = (state = initialState, action) => {
@@ -9,10 +9,20 @@ const iseWebsite = (state = initialState, action) => {
     case 'TOGGLE_Navbar':
       return {
         ...state,
-        navBar:!state.navBar
+        navBar: !state.navBar
       }
-  default:
-    return state
+    case 'OPEN_Navbar':
+      return {
+        ...state,
+        navBar: true
+      }
+    case 'CLOSE_Navbar':
+      return {
+        ...state,
+        navBar: false
+      }
+    default:
+      return state
   }
 }
 

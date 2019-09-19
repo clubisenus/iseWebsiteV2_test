@@ -15,6 +15,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         ToggleNavBar: () => dispatch({ type: 'TOGGLE_Navbar' }),
+        OpenNavBar: () => dispatch({ type: 'OPEN_Navbar' }),
+        CloseNavBar: () => dispatch({ type: 'CLOSE_Navbar' }),
     }
 }
 class LeftDrawer extends Component {
@@ -38,9 +40,8 @@ class LeftDrawer extends Component {
 
             <SwipeableDrawer
                 open={this.props.state.navBar}
-                onClose={this.props.ToggleNavBar}
-                
-                onOpen={this.props.ToggleNavBar}
+                onClose={this.props.CloseNavBar}
+                onOpen={this.props.OpenNavBar}
             >
                 <div id="sidebar">
                     {/*<div>*/}
