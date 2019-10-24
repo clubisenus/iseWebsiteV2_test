@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://clubisenus.github.io/iseWebsiteV2_test/precache-manifest.e1be7762138539342d5d6e8a4970bd6b.js"
+  "https://clubisenus.github.io/iseWebsiteV2_test/precache-manifest.a747f127c41017bebf47de2338d3feab.js"
 );
 
 self.addEventListener('message', (event) => {
