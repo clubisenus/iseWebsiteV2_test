@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4b08aad9409233602df87687d950dc1f",
+    "revision": "b5a55ddf18dbd0571631a76eaa23e304",
     "url": "https://clubisenus.github.io/iseWebsiteV2_test/index.html"
   },
   {
-    "revision": "b9a5de6077de717a5168",
-    "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/js/2.f45effee.chunk.js"
+    "revision": "17c92acd7ed8a6b6a38a",
+    "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/js/2.fa9d8e03.chunk.js"
   },
   {
-    "revision": "4b387670d88cb0e321f7",
-    "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/js/main.2fec58fc.chunk.js"
+    "revision": "056092f4973a24587177",
+    "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/js/main.e1c3be01.chunk.js"
   },
   {
     "revision": "293f2037bad085bd2054",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f7690cd3c90fd14ee274dd51f366b7e8",
     "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/media/CIP.f7690cd3.png"
+  },
+  {
+    "revision": "bf8cbddcae3ab23c4abb0d3761d479b0",
+    "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/media/CIP_Poster.bf8cbddc.jpg"
   },
   {
     "revision": "3974ddecaed83a99c9f6c16fa6fa7343",
@@ -50,6 +54,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "92c25fbfc062aa4c4a22be23fe9da0d0",
     "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/media/NC.92c25fbf.jpg"
+  },
+  {
+    "revision": "e2e20e1520e8213367a9555d5d6922cd",
+    "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/media/WelfarePoster.e2e20e15.jpg"
   },
   {
     "revision": "c241150c54f7abae789a327797658d46",
