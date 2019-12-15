@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b0dfd7601c4b60b5db740db9b48b9284",
+    "revision": "dd8f78a79a95006a8b983bd936922642",
     "url": "https://clubisenus.github.io/iseWebsiteV2_test/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/js/2.be997667.chunk.js"
   },
   {
-    "revision": "1f230926fc9028b7d350",
-    "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/js/main.d02e0869.chunk.js"
+    "revision": "528d1cd8d6edb4483ca6",
+    "url": "https://clubisenus.github.io/iseWebsiteV2_test/static/js/main.bd9b4a7a.chunk.js"
   },
   {
     "revision": "2fe387854c3b225458a0",
